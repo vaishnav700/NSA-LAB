@@ -1,0 +1,79 @@
+cselab@DESKTOP-4R3P3HL:~$ mkdir dir
+cselab@DESKTOP-4R3P3HL:~$ cd dir
+cselab@DESKTOP-4R3P3HL:~/dir$ cat > file1.txt
+red
+green
+blue
+^Z
+[1]+  Stopped                 cat > file1.txt
+cselab@DESKTOP-4R3P3HL:~/dir$ cat file1.txt
+red
+green
+blue
+cselab@DESKTOP-4R3P3HL:~/dir$ cat >> file1.txt
+yellow
+white
+black
+^Z
+[2]+  Stopped                 cat >> file1.txt
+cselab@DESKTOP-4R3P3HL:~/dir$ cat file1.txt
+red
+green
+blue
+yellow
+white
+black
+cselab@DESKTOP-4R3P3HL:~/dir$ cat file >> file1.txt
+cat: file: No such file or directory
+cselab@DESKTOP-4R3P3HL:~/dir$ cat >> file1.txt
+brown
+purple
+pink
+cyan
+beige
+^Z
+[3]+  Stopped                 cat >> file1.txt
+cselab@DESKTOP-4R3P3HL:~/dir$ head file1.txt
+red
+green
+blue
+yellow
+white
+black
+brown
+purple
+pink
+cyan
+cselab@DESKTOP-4R3P3HL:~/dir$ tail file1.txt
+green
+blue
+yellow
+white
+black
+brown
+purple
+pink
+cyan
+beige
+cselab@DESKTOP-4R3P3HL:~/dir$ grep e file1.txt
+red
+green
+blue
+yellow
+white
+purple
+beige
+cselab@DESKTOP-4R3P3HL:~/dir$ touch file2.txt
+cselab@DESKTOP-4R3P3HL:~/dir$ cp file1.txt file2.txt
+cselab@DESKTOP-4R3P3HL:~/dir$ cat file2.txt
+red
+green
+blue
+yellow
+white
+black
+brown
+purple
+pink
+cyan
+beige
